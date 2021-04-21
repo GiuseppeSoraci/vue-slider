@@ -1,0 +1,97 @@
+/* GENERALS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+header img {
+    max-width: 300px;
+}
+
+/* MAIN */
+
+/* Slider */
+.slider {
+    display: flex;
+    justify-content: space-around;
+}
+
+.slider .images {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+}
+
+.slider .images img {
+    object-fit: contain;
+}
+
+/* Arrows */
+.prev,
+.next {
+    position: absolute;
+    top: 55%;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    background: rgba(0,0,0, .5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.prev {
+    left: 250px;
+}
+
+.next {
+    right: 250px;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(0,0,0);
+}
+
+/* Dot */
+.nav {
+    position: absolute;
+    left: 43%;
+    bottom: 40px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    padding: 0 10px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255);
+}
+
+.nav i {
+    color: rgba(0,0,0, .5);
+    cursor: pointer;
+}
+
+.nav i:hover {
+    color: dodgerblue;
+}
+
+.nav i.active {
+    color: dodgerblue;
+}
