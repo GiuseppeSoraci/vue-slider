@@ -10,6 +10,9 @@ const app = new Vue({
         indexPhoto: 0,
         intervalID: 0,
     },
+    mounted() {
+        this.startLoop();
+    },
     methods: {
         prevPhoto() {
             this.indexPhoto--;
@@ -32,9 +35,13 @@ const app = new Vue({
             this.intervalID = setInterval(() => {
                 this.nextPhoto();
             }, 2000);
+
+            this.$refs.slider.blur();
         },
         stopLoop() {
             clearInterval(this.intervalID);
+
+            this.$refs - slider.focus();
         }
     }
 });

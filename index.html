@@ -27,7 +27,11 @@
         <!-- Slider -->
         <section class="slider"
                  @mouseenter="stopLoop"
-                 @mouseleave="startLoop">
+                 @mouseleave="startLoop"
+                 @keyup.left="prevPhoto"
+                 @keyup.right="nextPhoto"
+                 tabindex="0"
+                 ref="slider">
 
             <div class="prev" @click="prevPhoto">
                 <i class="fas fa-arrow-left"></i>
